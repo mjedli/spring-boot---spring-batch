@@ -3,6 +3,7 @@ package com.example.batchprocessing;
 public class Person {
 
 	private String lastName;
+	
 	private String firstName;
 
 	public Person() {
