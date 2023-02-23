@@ -69,9 +69,9 @@ public class BatchConfiguration {
     @Bean
     public ItemWriter<PersonXml> writerXml() {
     	
-    	String exportFile = new ClassPathResource("sample-xml.xml").getFilename();
+    	String exportFile = "xmloutput/"+new ClassPathResource("sample-xml.xml").getFilename();
     	
-    	log.info("FILE !!!!!!" +  exportFile);
+    	log.info("File xml output : " +  exportFile);
     	
         Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
         marshaller.setClassesToBeBound(PersonXml.class);
