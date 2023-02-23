@@ -69,7 +69,7 @@ public class BatchConfiguration {
     @Bean
     public ItemWriter<PersonXml> writerXml() {
     	
-    	String exportFile = "xmloutput/"+new ClassPathResource("sample-xml.xml").getFilename();
+    	String exportFile = "xmloutput/" + new ClassPathResource("sample-xml.xml").getFilename();
     	
     	log.info("File xml output : " +  exportFile);
     	
