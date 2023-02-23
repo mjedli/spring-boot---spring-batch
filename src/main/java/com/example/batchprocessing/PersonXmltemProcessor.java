@@ -5,9 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.batch.item.ItemProcessor;
 
-public class PersonIXmltemProcessor implements ItemProcessor<Person, PersonXml> {
+public class PersonXmltemProcessor implements ItemProcessor<Person, PersonXml> {
 
-	private static final Logger log = LoggerFactory.getLogger(PersonIXmltemProcessor.class);
+	private static final Logger log = LoggerFactory.getLogger(PersonXmltemProcessor.class);
 	
     @Override
     public PersonXml process(Person item) throws Exception {

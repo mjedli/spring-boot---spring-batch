@@ -53,8 +53,8 @@ public class BatchConfiguration {
 	}
 	
 	@Bean
-	public PersonIXmltemProcessor processorXml() {
-		return new PersonIXmltemProcessor();
+	public PersonXmltemProcessor processorXml() {
+		return new PersonXmltemProcessor();
 	}
 
 	@Bean
