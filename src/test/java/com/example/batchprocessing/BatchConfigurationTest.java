@@ -3,6 +3,7 @@
  */
 package com.example.batchprocessing;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.apache.commons.io.FileUtils;
@@ -10,10 +11,14 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
+import org.springframework.batch.core.ExitStatus;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecution;
+import org.springframework.batch.core.StepExecution;
+import org.springframework.batch.core.step.NoWorkFoundStepExecutionListener;
 import org.springframework.batch.test.JobLauncherTestUtils;
 import org.springframework.batch.test.JobRepositoryTestUtils;
+import org.springframework.batch.test.MetaDataInstanceFactory;
 import org.springframework.batch.test.context.SpringBatchTest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -62,5 +67,18 @@ public class BatchConfigurationTest {
         JobExecution jobExecution = jobLauncherTestUtils.launchStep("step2");
         Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode());
     }
+	
+	private NoWorkFoundStepExecutionListener tested = new NoWorkFoundStepExecutionListener();
+
+	@Test
+	public void testAfterStep() {
+	    StepExecution stepExecution = MetaDataInstanceFactory.createStepExecution();
+
+	    stepExecution.setExitStatus(ExitStatus.COMPLETED);
+	    stepExecution.setReadCount(0);
+
+	    ExitStatus exitStatus = tested.afterStep(stepExecution);
+	    assertEquals(ExitStatus.FAILED.getExitCode(), exitStatus.getExitCode());
+	}
     
 }
