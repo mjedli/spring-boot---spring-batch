@@ -48,6 +48,7 @@ public class BatchConfigurationTest {
         this.jobLauncherTestUtils.setJob(job);
         JobExecution jobExecution = jobLauncherTestUtils.launchJob();
         Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode());
+    	assertTrue("The files differ!", FileUtils.contentEquals(new FileSystemResource(EXPECTED_FILE).getFile(), new FileSystemResource(OUTPUT_FILE).getFile()));
     }
     
     @Test
@@ -60,7 +61,6 @@ public class BatchConfigurationTest {
     public void testJobStep2() throws Exception {
         JobExecution jobExecution = jobLauncherTestUtils.launchStep("step2");
         Assert.assertEquals("COMPLETED", jobExecution.getExitStatus().getExitCode());
-    	assertTrue("The files differ!", FileUtils.contentEquals(new FileSystemResource(EXPECTED_FILE).getFile(), new FileSystemResource(OUTPUT_FILE).getFile()));
     }
     
 }
