@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.example.batchprocessing.BatchConfigurationTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.832 s <<< FAILURE! - in com.example.batchprocessing.BatchConfigurationTest
+testJob{Job}  Time elapsed: 0.292 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testJob(BatchConfigurationTest.java:55)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testJob(BatchConfigurationTest.java:55)
+
+testJobStep1  Time elapsed: 0.119 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testJobStep1(BatchConfigurationTest.java:62)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testJobStep1(BatchConfigurationTest.java:62)
+
+testJobStep2  Time elapsed: 0.346 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testJobStep2(BatchConfigurationTest.java:68)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testJobStep2(BatchConfigurationTest.java:68)
+
+testAfterStep  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testAfterStep(BatchConfigurationTest.java:81)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at com.example.batchprocessing.BatchConfigurationTest.testAfterStep(BatchConfigurationTest.java:81)
+

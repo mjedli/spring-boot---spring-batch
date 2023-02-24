@@ -54,7 +54,7 @@ public class BatchConfigurationReaderTest {
     }
 	
     @Test
-    public void givenMockedStep_whenReaderCalled_thenSuccess() throws Exception {
+    public void testReader2() throws Exception {
         // when
         StepScopeTestUtils.doInStepScope(getStepExecution(), () -> {
             Person person;

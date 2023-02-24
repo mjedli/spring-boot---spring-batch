@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: com.example.batchprocessing.BatchConfigurationReaderTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.49 s <<< FAILURE! - in com.example.batchprocessing.BatchConfigurationReaderTest
+givenMockedStep_whenReaderCalled_thenSuccess  Time elapsed: 0.881 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at com.example.batchprocessing.BatchConfigurationReaderTest.lambda$0(BatchConfigurationReaderTest.java:65)
+	at com.example.batchprocessing.BatchConfigurationReaderTest.givenMockedStep_whenReaderCalled_thenSuccess(BatchConfigurationReaderTest.java:59)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at com.example.batchprocessing.BatchConfigurationReaderTest.lambda$0(BatchConfigurationReaderTest.java:65)
+	at com.example.batchprocessing.BatchConfigurationReaderTest.givenMockedStep_whenReaderCalled_thenSuccess(BatchConfigurationReaderTest.java:59)
+
+testReader  Time elapsed: 0.009 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/junit/Assert
+	at com.example.batchprocessing.BatchConfigurationReaderTest.testReader(BatchConfigurationReaderTest.java:52)
+Caused by: java.lang.ClassNotFoundException: org.junit.Assert
+	at com.example.batchprocessing.BatchConfigurationReaderTest.testReader(BatchConfigurationReaderTest.java:52)
+
